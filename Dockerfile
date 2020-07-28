@@ -2,16 +2,18 @@ FROM centos:8
 
 MAINTAINER tminai
 
+# Insall HTTPD and PHP
 RUN dnf -y update && \
     dnf -y install httpd wget && \
     dnf -y install php-mysqlnd php php-gd php-mbstring && \
     systemctl enable httpd.service && \
     systemctl enable php-fpm.service
 
+# Install MySQL
 RUN dnf -y install mysql-server && \
     systemctl enable mysqld.service
 
-
+# Get Testlink
 RUN wget -q "http://sourceforge.net/projects/testlink/files/TestLink%201.9/TestLink%201.9.20/testlink-1.9.20.tar.gz/download" -O testlink-1.9.20.tar.gz && \
     tar zxvf testlink-1.9.20.tar.gz && \
     mv testlink-1.9.20 /var/www/html/testlink && \
