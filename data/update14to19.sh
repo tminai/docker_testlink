@@ -1,7 +1,7 @@
 echo "Copy Files"
 
-cp /opt/1.9.18_step1_db_schema_update.sql  /var/www/html/testlink/install/sql/alter_tables/1.9.18/mysql/DB.1.9.18/step1/db_schema_update.sql
-cp /opt/1.9.19_step1_db_schema_update.sql  /var/www/html/testlink/install/sql/alter_tables/1.9.19/mysql/DB.1.9.19/step1/db_schema_update.sql
+echo y | cp /opt/1.9.17_step1_db_schema_update.sql  /var/www/html/testlink/install/sql/alter_tables/1.9.17/mysql/DB.1.9.17/step1/db_schema_update.sql
+echo y | cp /opt/1.9.18_step1_db_schema_update.sql  /var/www/html/testlink/install/sql/alter_tables/1.9.18/mysql/DB.1.9.18/step1/db_schema_update.sql
 
 echo "1.9.15"
 sleep 1

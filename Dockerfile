@@ -5,7 +5,7 @@ MAINTAINER tminai
 # Insall HTTPD and PHP
 RUN dnf -y update && \
     dnf -y install httpd wget && \
-    dnf -y install php-mysqlnd php php-gd php-mbstring php-json&& \
+    dnf -y install php-mysqlnd php php-gd php-mbstring php-json php-xml&& \
     systemctl enable httpd.service && \
     systemctl enable php-fpm.service
 
