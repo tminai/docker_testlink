@@ -5,7 +5,7 @@ MAINTAINER tminai
 # Insall HTTPD and PHP
 RUN dnf -y update && \
     dnf -y install httpd wget && \
-    dnf -y install php-mysqlnd php php-gd php-mbstring && \
+    dnf -y install php-mysqlnd php php-gd php-mbstring php-json&& \
     systemctl enable httpd.service && \
     systemctl enable php-fpm.service
 
@@ -30,9 +30,6 @@ RUN chmod 777 -R /var/www/html/testlink && \
     chmod 777 -R /var/testlink/upload_area
 
 RUN chown -R apache:apache /var/www/html/testlink
-
-ADD ./init/init.sh /opt
-RUN chmod 755 /opt/init.sh
 
 CMD ["/sbin/init", "3"]
 
