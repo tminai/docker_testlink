@@ -1,1 +1,1 @@
-rm -rf /var/www/install
+rm -rf /var/www/html/testlink/install
