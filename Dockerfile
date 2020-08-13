@@ -16,7 +16,7 @@ RUN dnf -y install mysql-server && \
 # Get Testlink
 RUN wget -q "http://sourceforge.net/projects/testlink/files/TestLink%201.9/TestLink%201.9.19/testlink-1.9.19.tar.gz/download" -O testlink-1.9.19.tar.gz && \
     tar zxvf testlink-1.9.19.tar.gz && \
-    mv testlink-1.9.19 /var/www/html/ && \
+    mv -fT testlink-1.9.19 /var/www/html && \
     rm testlink-1.9.19.tar.gz
 
 RUN echo "max_execution_time=3000" >> /etc/php.ini && \
