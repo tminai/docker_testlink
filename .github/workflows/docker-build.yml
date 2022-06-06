@@ -27,4 +27,4 @@ jobs:
         if: success()
         uses: actions-hub/docker@master
         with:
-          args: push tminai/docker_testlink:latest
+          args: push tminai/testlink:latest
