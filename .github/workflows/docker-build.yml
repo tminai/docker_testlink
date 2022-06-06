@@ -21,7 +21,7 @@ jobs:
 
       - name: Build :latest
         if: success()
-        run: docker build -t tminai/docker_testlink:latest .
+        run: docker build -t tminai/testlink:latest .
 
       - name: Deploy :latest
         if: success()
