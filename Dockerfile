@@ -1,4 +1,4 @@
-FROM redhat/ubi8
+FROM almalinux:8
 
 MAINTAINER tminai
 
