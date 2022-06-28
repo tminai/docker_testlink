@@ -23,5 +23,9 @@ sleep 1
 echo "1.9.19"
 mysql -uroot -proot testlink < /var/www/html/testlink/install/sql/alter_tables/1.9.19/mysql/DB.1.9.19/step1/db_schema_update.sql
 mysql -uroot -proot testlink < /var/www/html/testlink/install/sql/alter_tables/1.9.19/mysql/DB.1.9.19/stepZ/z_final_step.sql
+sleep 1
+echo "1.9.20"
+mysql -uroot -proot testlink < /var/www/html/testlink/install/sql/alter_tables/1.9.20/mysql/DB.1.9.20/step1/db_schema_update.sql
+mysql -uroot -proot testlink < /var/www/html/testlink/install/sql/alter_tables/1.9.20/mysql/DB.1.9.20/stepZ/z_final_step.sql
 echo "Change default of modification_ts at tcversions"
 mysql -uroot -proot testlink -e 'ALTER TABLE tcversions ALTER modification_ts SET DEFAULT '\''2000-01-01 00:00:00'\'';'
